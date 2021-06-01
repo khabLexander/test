@@ -43,44 +43,33 @@
             <div class="clear-fix"></div>
         </div>
     </header>
-    <div id="slider" class="slider-big">
-        <h1>Bienvenido al Master Frameworks</h1>
-        <a href="#" class="btn-white">Ir al Blog</a>
-    </div>
     <div class="center">
         <section id="content">
-            <h2 class="subheader">Últimos artículos</h2>
-            <!--Listado Articulos-->
-            <script type="text/javascript">
-                window.addEventListener("load", function(event) {
-                    var template = document.getElementById("article-template")
-                    var clonado = template.cloneNode(true);
-                    var articles = document.getElementById("articles")
-                    for (var i = 0; i < 5; i++) {
-                        var clonado = template.cloneNode(true);
-                        clonado.removeAttribute("id");
-                        var h2 = clonado.getElementsByTagName("h2")[0];
-                        h2.innerHTML = h2.textContent + ' ' + i;
-                        articles.appendChild(clonado)
-                    }
-                });
-            </script>
-            <div id="articles">
-                <article class="article-item" id="article-template">
-                    <div class="image-wrap">
-                        <img src="https://www.landuum.com/wp-content/uploads/2019/03/cultura_paisajeiluminado_landuum5.jpg" alt="paisaje">
-                    </div>
-                    <h2>Artículo de prueba</h2>
-                    <span class="date">
-                        Hace 5 minutos
-                    </span>
-                    <a href="#">Leer más</a>
-                    <div class="clear-fix"></div>
-                </article>
-                <!--Aqui se agregan dinamicamente desde el JS-->
-            </div>
+            <h1 class="subheader">
+                Formulario
+            </h1>
+            <form class="mid-form" action="">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido">
+                </div>
+                <div class="form-group">
+                    <label for="bio">Biografía</label>
+                    <textarea name="bio" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group radibuttons">
+                    <input type="radio" name="genero" value="hombre" /> Hombre
+                    <input type="radio" name="genero" value="mujer" /> Mujer
+                    <input type="radio" name="otro" value="otro" /> Otro
+                </div>
+                <div class="clear-fix"></div>
 
-
+                <input type="submit" value="enviar" class="btn btn-success">
+            </form>
         </section>
 
         <!--Listado articulos-->
